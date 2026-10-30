@@ -15,25 +15,39 @@ main{
     padding: 10px;
     display: grid;
     gap: 10px;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 80px 100px 1fr;
-    grid-template-areas: "header header"
-    "aside section"
-    "footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 0.5fr 0.5fr;
+    grid-template-areas: "header header header"
+    " section section section"
+    " div-left bottom-up div-right"
+    "div-left bottom-down div-right";
 }
 header{
     background: #e31010;
     grid-area: header;
 }
-aside{
-    background: #13d11d;
-    grid-area: aside;
-}
+
+
 section{
     background: #5c0cfc;
     grid-area: section;
 }
-footer{
+#bottom-up{
     background: #e805ba;
-    grid-area: footer;
+    grid-area: bottom-up;
+}
+#right-div{
+    background-color: cadetblue;
+    grid-area: div-right;
+
+}
+#bottom-down{
+    background-color: chocolate;
+    grid-area: bottom-down;
+}
+
+#left-div{
+    background-color: rgb(112, 155, 26);
+    grid-area: div-left;
+
 }
