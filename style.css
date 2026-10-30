@@ -8,42 +8,38 @@ html,body{
     height: 100%;
     width: 100%;
 }
-#main{
-    margin: 20px;
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-#card{
-    height: 300px ;
-    width: 250px;
-    background-color: red;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-    text-align: center;
-    gap: 10px;
-}
-#card img{
-    height: 80px;
-    width: 80px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
 
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr;
+    grid-template-areas: "header header header"
+            "section section section"
+            "div1 div2 div3";
 }
-button{
-    padding: 10px 20px;
-    border-radius: 50px;
-    background-color: rgb(44, 44, 158);
 
-    
-    font-size: 15px;
+header{
+    background-color: brown;
+    grid-area: header;
 }
-button:hover{
-background-color: aqua;
-cursor: pointer;
+section{
+    background-color: antiquewhite;
+    grid-area: section;
+}
+#div1{
+    background-color: aqua;
+    grid-area: div1;
+}
+#div2{
+    background-color: rgb(45, 188, 32);
+    grid-area: div2;
+}
+#div3{
+    background-color: rgb(32, 7, 198);
+    grid-area: div3;
 }
